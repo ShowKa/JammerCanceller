@@ -10,7 +10,39 @@
 		A520330B220EF2820096FB57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A520330A220EF2820096FB57 /* AppDelegate.swift */; };
 		A520330D220EF2820096FB57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A520330C220EF2820096FB57 /* Assets.xcassets */; };
 		A5203310220EF2820096FB57 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A520330E220EF2820096FB57 /* MainMenu.xib */; };
+		A520331F220EF2AE0096FB57 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A520331E220EF2AE0096FB57 /* Cocoa.framework */; };
+		A5203322220EF2AE0096FB57 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5203321220EF2AE0096FB57 /* SafariExtensionHandler.swift */; };
+		A5203324220EF2AE0096FB57 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5203323220EF2AE0096FB57 /* SafariExtensionViewController.swift */; };
+		A5203327220EF2AE0096FB57 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5203325220EF2AE0096FB57 /* SafariExtensionViewController.xib */; };
+		A520332A220EF2AE0096FB57 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = A5203329220EF2AE0096FB57 /* script.js */; };
+		A520332C220EF2AE0096FB57 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A520332B220EF2AE0096FB57 /* ToolbarItemIcon.pdf */; };
+		A5203330220EF2AE0096FB57 /* JammerCancellerExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A520331C220EF2AE0096FB57 /* JammerCancellerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A5203337220EF4E90096FB57 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = A5203336220EF4E90096FB57 /* style.css */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A520332E220EF2AE0096FB57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A52032FF220EF2820096FB57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A520331B220EF2AE0096FB57;
+			remoteInfo = JammerCancellerExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5203334220EF2AE0096FB57 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A5203330220EF2AE0096FB57 /* JammerCancellerExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A5203307220EF2820096FB57 /* JammerCanceller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JammerCanceller.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +51,16 @@
 		A520330F220EF2820096FB57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A5203311220EF2820096FB57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5203312220EF2820096FB57 /* JammerCanceller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JammerCanceller.entitlements; sourceTree = "<group>"; };
+		A520331C220EF2AE0096FB57 /* JammerCancellerExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JammerCancellerExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A520331E220EF2AE0096FB57 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A5203321220EF2AE0096FB57 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		A5203323220EF2AE0096FB57 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		A5203326220EF2AE0096FB57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		A5203328220EF2AE0096FB57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5203329220EF2AE0096FB57 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		A520332B220EF2AE0096FB57 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		A520332D220EF2AE0096FB57 /* JammerCancellerExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JammerCancellerExtension.entitlements; sourceTree = "<group>"; };
+		A5203336220EF4E90096FB57 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +71,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5203319220EF2AE0096FB57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A520331F220EF2AE0096FB57 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				A5203309220EF2820096FB57 /* JammerCanceller */,
+				A5203320220EF2AE0096FB57 /* JammerCancellerExtension */,
+				A520331D220EF2AE0096FB57 /* Frameworks */,
 				A5203308220EF2820096FB57 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				A5203307220EF2820096FB57 /* JammerCanceller.app */,
+				A520331C220EF2AE0096FB57 /* JammerCancellerExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +113,29 @@
 			path = JammerCanceller;
 			sourceTree = "<group>";
 		};
+		A520331D220EF2AE0096FB57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A520331E220EF2AE0096FB57 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5203320220EF2AE0096FB57 /* JammerCancellerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A5203336220EF4E90096FB57 /* style.css */,
+				A5203321220EF2AE0096FB57 /* SafariExtensionHandler.swift */,
+				A5203323220EF2AE0096FB57 /* SafariExtensionViewController.swift */,
+				A5203325220EF2AE0096FB57 /* SafariExtensionViewController.xib */,
+				A5203328220EF2AE0096FB57 /* Info.plist */,
+				A5203329220EF2AE0096FB57 /* script.js */,
+				A520332B220EF2AE0096FB57 /* ToolbarItemIcon.pdf */,
+				A520332D220EF2AE0096FB57 /* JammerCancellerExtension.entitlements */,
+			);
+			path = JammerCancellerExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -70,15 +146,34 @@
 				A5203303220EF2820096FB57 /* Sources */,
 				A5203304220EF2820096FB57 /* Frameworks */,
 				A5203305220EF2820096FB57 /* Resources */,
+				A5203334220EF2AE0096FB57 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A520332F220EF2AE0096FB57 /* PBXTargetDependency */,
 			);
 			name = JammerCanceller;
 			productName = JammerCanceller;
 			productReference = A5203307220EF2820096FB57 /* JammerCanceller.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A520331B220EF2AE0096FB57 /* JammerCancellerExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5203331220EF2AE0096FB57 /* Build configuration list for PBXNativeTarget "JammerCancellerExtension" */;
+			buildPhases = (
+				A5203318220EF2AE0096FB57 /* Sources */,
+				A5203319220EF2AE0096FB57 /* Frameworks */,
+				A520331A220EF2AE0096FB57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JammerCancellerExtension;
+			productName = JammerCancellerExtension;
+			productReference = A520331C220EF2AE0096FB57 /* JammerCancellerExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -91,6 +186,10 @@
 				ORGANIZATIONNAME = "金本翔太";
 				TargetAttributes = {
 					A5203306220EF2820096FB57 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					A520331B220EF2AE0096FB57 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -110,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				A5203306220EF2820096FB57 /* JammerCanceller */,
+				A520331B220EF2AE0096FB57 /* JammerCancellerExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +224,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A520331A220EF2AE0096FB57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A520332C220EF2AE0096FB57 /* ToolbarItemIcon.pdf in Resources */,
+				A5203337220EF4E90096FB57 /* style.css in Resources */,
+				A5203327220EF2AE0096FB57 /* SafariExtensionViewController.xib in Resources */,
+				A520332A220EF2AE0096FB57 /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -135,7 +246,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5203318220EF2AE0096FB57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5203324220EF2AE0096FB57 /* SafariExtensionViewController.swift in Sources */,
+				A5203322220EF2AE0096FB57 /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A520332F220EF2AE0096FB57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A520331B220EF2AE0096FB57 /* JammerCancellerExtension */;
+			targetProxy = A520332E220EF2AE0096FB57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A520330E220EF2820096FB57 /* MainMenu.xib */ = {
@@ -144,6 +272,14 @@
 				A520330F220EF2820096FB57 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		A5203325220EF2AE0096FB57 /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5203326220EF2AE0096FB57 /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -258,6 +394,7 @@
 		A5203316220EF2820096FB57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = JammerCanceller/JammerCanceller.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -273,6 +410,7 @@
 		A5203317220EF2820096FB57 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = JammerCanceller/JammerCanceller.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -281,6 +419,34 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.showka.JammerCanceller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		A5203332220EF2AE0096FB57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JammerCancellerExtension/JammerCancellerExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JammerCancellerExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.showka.JammerCanceller.JammerCancellerExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		A5203333220EF2AE0096FB57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JammerCancellerExtension/JammerCancellerExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JammerCancellerExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.showka.JammerCanceller.JammerCancellerExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -302,6 +468,15 @@
 			buildConfigurations = (
 				A5203316220EF2820096FB57 /* Debug */,
 				A5203317220EF2820096FB57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5203331220EF2AE0096FB57 /* Build configuration list for PBXNativeTarget "JammerCancellerExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5203332220EF2AE0096FB57 /* Debug */,
+				A5203333220EF2AE0096FB57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
