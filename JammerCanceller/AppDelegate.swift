@@ -22,6 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-
+    @IBAction func outputLogWhenButtonClick(_ sender: Any) {
+        NSLog("LogTestボタンがクリックされました")
+    }
 }
 
