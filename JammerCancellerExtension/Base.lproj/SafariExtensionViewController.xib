@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SafariExtensionViewController" customModule="JammerCancellerExtension" customModuleProvider="target">
             <connections>
+                <outlet property="url" destination="Ila-cG-yMf" id="YlY-2d-6Ms"/>
                 <outlet property="view" destination="c22-O7-iKe" id="vwT-Xx-Aiz"/>
             </connections>
         </customObject>

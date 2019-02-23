@@ -12,11 +12,14 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     
     static let shared = SafariExtensionViewController()
 
+    @IBOutlet weak var url: NSTextField!
+    
     @IBAction func buttonClick(_ sender: Any) {
         NSLog("---------------popup button clicked---------------------")
     }
     
     @IBAction func inputUrl(_ sender: Any) {
         NSLog("---------------input url--------------------------------")
+        NSLog(url.accessibilityValue()!)
     }
 }
