@@ -12,4 +12,8 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     
     static let shared = SafariExtensionViewController()
 
+    @IBAction func buttonClick(_ sender: Any) {
+        NSLog("---------------popup button clicked---------------------")
+    }
+    
 }
