@@ -16,4 +16,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         NSLog("---------------popup button clicked---------------------")
     }
     
+    @IBAction func inputUrl(_ sender: Any) {
+        NSLog("---------------input url--------------------------------")
+    }
 }
