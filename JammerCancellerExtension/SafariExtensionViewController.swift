@@ -14,8 +14,22 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
 
     @IBOutlet weak var url: NSTextField!
     
+    // 任意の引数を取る自作のイニシャライザ
+    init() {
+        // クラスの持つ指定イニシャライザを呼び出す
+        super.init(nibName: nil, bundle: nil)
+        NSLog("-----------------------call init-------------------------")
+        //let urlValue = UserDefaults.standard.string(forKey: "url")
+    }
+    
+    // 新しく init を定義した場合に必須
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) 未実装です・・・")
+    }
+    
     @IBAction func buttonClick(_ sender: Any) {
         NSLog("---------------popup button clicked---------------------")
+        UserDefaults.standard.set(url.accessibilityValue(), forKey: "url")
     }
     
     @IBAction func inputUrl(_ sender: Any) {
