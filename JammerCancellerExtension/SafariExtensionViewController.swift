@@ -12,14 +12,17 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     
     static let shared = SafariExtensionViewController()
 
+    // fields.....
     @IBOutlet weak var url: NSTextField!
     
+    // ----------------
+    // 画面初期設定
+    // ----------------
     // 任意の引数を取る自作のイニシャライザ
     init() {
         // クラスの持つ指定イニシャライザを呼び出す
         super.init(nibName: nil, bundle: nil)
         NSLog("-----------------------call init-------------------------")
-        //let urlValue = UserDefaults.standard.string(forKey: "url")
     }
     
     // 新しく init を定義した場合に必須
@@ -27,6 +30,16 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         fatalError("init(coder:) 未実装です・・・")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let urlValue : String = UserDefaults.standard.string(forKey: "url") ?? ""
+        NSLog("saved value = " + urlValue)
+        url.stringValue = urlValue
+    }
+    
+    // ----------------
+    // 操作
+    // ----------------
     @IBAction func buttonClick(_ sender: Any) {
         NSLog("---------------popup button clicked---------------------")
         UserDefaults.standard.set(url.accessibilityValue(), forKey: "url")
