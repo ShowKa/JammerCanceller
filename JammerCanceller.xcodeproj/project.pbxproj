@@ -18,6 +18,7 @@
 		A520332C220EF2AE0096FB57 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A520332B220EF2AE0096FB57 /* ToolbarItemIcon.pdf */; };
 		A5203330220EF2AE0096FB57 /* JammerCancellerExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A520331C220EF2AE0096FB57 /* JammerCancellerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A5203337220EF4E90096FB57 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = A5203336220EF4E90096FB57 /* style.css */; };
+		A5598DE122221E36008FA511 /* SafariExtensionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5598DE022221E36008FA511 /* SafariExtensionService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		A520332B220EF2AE0096FB57 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		A520332D220EF2AE0096FB57 /* JammerCancellerExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JammerCancellerExtension.entitlements; sourceTree = "<group>"; };
 		A5203336220EF4E90096FB57 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		A5598DE022221E36008FA511 /* SafariExtensionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				A5203321220EF2AE0096FB57 /* SafariExtensionHandler.swift */,
 				A5203323220EF2AE0096FB57 /* SafariExtensionViewController.swift */,
 				A5203325220EF2AE0096FB57 /* SafariExtensionViewController.xib */,
+				A5598DE022221E36008FA511 /* SafariExtensionService.swift */,
 				A5203328220EF2AE0096FB57 /* Info.plist */,
 				A5203329220EF2AE0096FB57 /* script.js */,
 				A520332B220EF2AE0096FB57 /* ToolbarItemIcon.pdf */,
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5203324220EF2AE0096FB57 /* SafariExtensionViewController.swift in Sources */,
+				A5598DE122221E36008FA511 /* SafariExtensionService.swift in Sources */,
 				A5203322220EF2AE0096FB57 /* SafariExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
