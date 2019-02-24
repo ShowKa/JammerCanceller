@@ -18,13 +18,18 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         page.getPropertiesWithCompletionHandler { properties in
             NSLog("The extension received a message (\(messageName)) from a script injected into (\(String(describing: properties?.url))) with userInfo (\(userInfo ?? [:]))")
             // call service
-            if messageName == "execute?" {
-                let targetWebPage = self.service.targetWebPage()
+            switch messageName {
+            case "execute?":
+                let targetWebPage = self.service.targetWebPage(webPageUrl: properties!.url!.absoluteString)
                 if targetWebPage {
                     // do it
                     NSLog("DoIt")
                     page.dispatchMessageToScript(withName: "DoIt")
                 }
+                break
+            default:
+                NSLog("--- Unknown message : " + messageName + " ---")
+                break
             }
         }
     }

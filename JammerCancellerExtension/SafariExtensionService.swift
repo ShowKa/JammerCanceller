@@ -13,9 +13,11 @@ class SafariExtensionService {
     // instance
     static let shared = SafariExtensionService()
     
-    func targetWebPage() -> Bool {
-        // let url = self.getUrl()
-        return true
+    func targetWebPage(webPageUrl url: String) -> Bool {
+        let _target = self.getUrl()
+        NSLog(_target)
+        NSLog(url)
+        return url.matches(_target)
     }
     
     func saveUrl(url:String) {
@@ -26,3 +28,4 @@ class SafariExtensionService {
         return UserDefaults.standard.string(forKey: "url") ?? ""
     }
 }
+

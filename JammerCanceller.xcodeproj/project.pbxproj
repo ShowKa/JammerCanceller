@@ -19,6 +19,7 @@
 		A5203330220EF2AE0096FB57 /* JammerCancellerExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A520331C220EF2AE0096FB57 /* JammerCancellerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A5203337220EF4E90096FB57 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = A5203336220EF4E90096FB57 /* style.css */; };
 		A5598DE122221E36008FA511 /* SafariExtensionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5598DE022221E36008FA511 /* SafariExtensionService.swift */; };
+		A5B8ED5C2222CA4500901D3F /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8ED5B2222CA4500901D3F /* ExtensionString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		A520332D220EF2AE0096FB57 /* JammerCancellerExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JammerCancellerExtension.entitlements; sourceTree = "<group>"; };
 		A5203336220EF4E90096FB57 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		A5598DE022221E36008FA511 /* SafariExtensionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionService.swift; sourceTree = "<group>"; };
+		A5B8ED5B2222CA4500901D3F /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				A5203329220EF2AE0096FB57 /* script.js */,
 				A520332B220EF2AE0096FB57 /* ToolbarItemIcon.pdf */,
 				A520332D220EF2AE0096FB57 /* JammerCancellerExtension.entitlements */,
+				A5B8ED5B2222CA4500901D3F /* ExtensionString.swift */,
 			);
 			path = JammerCancellerExtension;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B8ED5C2222CA4500901D3F /* ExtensionString.swift in Sources */,
 				A5203324220EF2AE0096FB57 /* SafariExtensionViewController.swift in Sources */,
 				A5598DE122221E36008FA511 /* SafariExtensionService.swift in Sources */,
 				A5203322220EF2AE0096FB57 /* SafariExtensionHandler.swift in Sources */,

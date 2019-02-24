@@ -18,4 +18,5 @@ function handleMessage(event) {
 
 function doIt() {
 	// doit
+    // alert("doIt");
 }
