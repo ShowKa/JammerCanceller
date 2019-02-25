@@ -1,7 +1,27 @@
-body {
-    text-align : right !important;
+.jc-overlay {
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-div {
-    color : green !important;
+.jc-content {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+}
+
+.jc-message {
+    font-weight: bold;
+    color: black;
+}
+
+.jc-input {
+    width: 300px;
 }

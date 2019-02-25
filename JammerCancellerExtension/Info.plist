@@ -39,6 +39,14 @@
 		<array>
 			<dict>
 				<key>Script</key>
+				<string>element.js</string>
+			</dict>
+			<dict>
+				<key>Script</key>
+				<string>overlay.js</string>
+			</dict>
+			<dict>
+				<key>Script</key>
 				<string>script.js</string>
 			</dict>
 		</array>
