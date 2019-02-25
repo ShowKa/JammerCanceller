@@ -24,7 +24,8 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                 if targetWebPage {
                     // do it
                     NSLog("DoIt")
-                    page.dispatchMessageToScript(withName: "DoIt")
+                    let message = self.service.getRandomMessage()
+                    page.dispatchMessageToScript(withName: "DoIt", userInfo: ["message" : message])
                 }
                 break
             default:

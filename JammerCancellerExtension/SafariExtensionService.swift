@@ -20,6 +20,10 @@ class SafariExtensionService {
         return url.matches(_target)
     }
     
+    func getRandomMessage() -> String {
+        return "i don't want to work..."
+    }
+    
     func saveUrl(url:String) {
         UserDefaults.standard.set(url, forKey: "url")
     }

@@ -6,17 +6,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 function handleMessage(event) {
-    var message = event.name;
-    switch (message) {
+    var name = event.name;
+    var param = event.message;
+    switch (name) {
         case "DoIt":
-            doIt();
+            doIt(param.message);
             break;
         default:
             break;
     }
 }
 
-function doIt() {
-	// doit
-    // alert("doIt");
+function doIt(message) {
+    // doit
+    // alert(message);
 }
