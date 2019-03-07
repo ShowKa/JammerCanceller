@@ -1,13 +1,14 @@
 .jc-overlay {
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
     text-align: center;
     z-index: 10000;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 1);
+    font-size: 15px important!;
 }
 
 .jc-content {
@@ -19,7 +20,7 @@
 
 .jc-message {
     font-weight: bold;
-    color: black;
+    color: white;
 }
 
 .jc-input {
