@@ -21,7 +21,7 @@ class SafariExtensionService {
     }
     
     func getRandomMessage() -> String {
-        return "i don't want to work..."
+        return getMessageList()[0]
     }
     
     func saveUrl(url:String) {
@@ -30,6 +30,20 @@ class SafariExtensionService {
     
     func getUrl() -> String {
         return UserDefaults.standard.string(forKey: "url") ?? ""
+    }
+    
+    // message list from Message.plist
+    private func getMessageList() -> [String] {
+        var myEnglishArray: [String] = []
+        if let URL = Bundle.main.url(forResource: "Message", withExtension: "plist") {
+            guard let englishFromPlist = NSDictionary(contentsOf: URL) else { return [] }
+            if let englishArray = englishFromPlist.value(forKey: "message") as? [String] {
+                for myEnglish in englishArray {
+                    myEnglishArray.append(myEnglish)
+                }
+            }
+        }
+        return myEnglishArray
     }
 }
 
