@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A515AD23223176C30048E537 /* ExtensionInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A515AD22223176C30048E537 /* ExtensionInt.swift */; };
 		A520330B220EF2820096FB57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A520330A220EF2820096FB57 /* AppDelegate.swift */; };
 		A520330D220EF2820096FB57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A520330C220EF2820096FB57 /* Assets.xcassets */; };
 		A5203310220EF2820096FB57 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A520330E220EF2820096FB57 /* MainMenu.xib */; };
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A515AD22223176C30048E537 /* ExtensionInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionInt.swift; sourceTree = "<group>"; };
 		A5203307220EF2820096FB57 /* JammerCanceller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JammerCanceller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A520330A220EF2820096FB57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A520330C220EF2820096FB57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				A520332B220EF2AE0096FB57 /* ToolbarItemIcon.pdf */,
 				A520332D220EF2AE0096FB57 /* JammerCancellerExtension.entitlements */,
 				A5B8ED5B2222CA4500901D3F /* ExtensionString.swift */,
+				A515AD22223176C30048E537 /* ExtensionInt.swift */,
 			);
 			path = JammerCancellerExtension;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				A5B8ED5C2222CA4500901D3F /* ExtensionString.swift in Sources */,
 				A5203324220EF2AE0096FB57 /* SafariExtensionViewController.swift in Sources */,
 				A5598DE122221E36008FA511 /* SafariExtensionService.swift in Sources */,
+				A515AD23223176C30048E537 /* ExtensionInt.swift in Sources */,
 				A5203322220EF2AE0096FB57 /* SafariExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

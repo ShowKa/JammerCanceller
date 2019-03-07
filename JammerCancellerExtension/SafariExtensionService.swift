@@ -21,7 +21,9 @@ class SafariExtensionService {
     }
     
     func getRandomMessage() -> String {
-        return getMessageList()[0]
+        let list = getMessageList();
+        let index = Int.random(range: 0..<list.count)
+        return list[index];
     }
     
     func saveUrl(url:String) {
