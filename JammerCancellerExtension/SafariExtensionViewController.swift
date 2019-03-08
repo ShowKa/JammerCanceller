@@ -12,8 +12,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     
     static let shared = SafariExtensionViewController()
 
-    // fields.....
-    @IBOutlet weak var url: NSTextField!
+    @IBOutlet weak var urlTable: NSTableView!
     
     // ----------------
     // 画面初期設定
@@ -34,7 +33,9 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         super.viewDidLoad()
         let urlValue : String = UserDefaults.standard.string(forKey: "url") ?? ""
         NSLog("saved value = " + urlValue)
-        url.stringValue = urlValue
+        // url.stringValue = urlValue
+        urlTable.dataSource = UrlDataSource()
+        urlTable.delegate = UrlTableViewDelegate()
     }
     
     // ----------------
@@ -42,11 +43,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     // ----------------
     @IBAction func buttonClick(_ sender: Any) {
         NSLog("---------------popup button clicked---------------------")
-        UserDefaults.standard.set(url.accessibilityValue(), forKey: "url")
-    }
-    
-    @IBAction func inputUrl(_ sender: Any) {
-        NSLog("---------------input url--------------------------------")
-        NSLog(url.accessibilityValue()!)
+        // UserDefaults.standard.set(url.accessibilityValue(), forKey: "url")
     }
 }

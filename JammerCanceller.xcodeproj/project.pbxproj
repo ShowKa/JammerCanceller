@@ -24,6 +24,8 @@
 		A553DA98222442BC00B6F6BA /* overlay.js in Resources */ = {isa = PBXBuildFile; fileRef = A553DA97222442BC00B6F6BA /* overlay.js */; };
 		A5598DE122221E36008FA511 /* SafariExtensionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5598DE022221E36008FA511 /* SafariExtensionService.swift */; };
 		A5B8ED5C2222CA4500901D3F /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B8ED5B2222CA4500901D3F /* ExtensionString.swift */; };
+		A5E9BA832232BEC300E3F6E5 /* UrlDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E9BA822232BEC300E3F6E5 /* UrlDataSource.swift */; };
+		A5E9BA862232C30500E3F6E5 /* UrlTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E9BA852232C30500E3F6E5 /* UrlTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		A553DA97222442BC00B6F6BA /* overlay.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = overlay.js; sourceTree = "<group>"; };
 		A5598DE022221E36008FA511 /* SafariExtensionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionService.swift; sourceTree = "<group>"; };
 		A5B8ED5B2222CA4500901D3F /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
+		A5E9BA822232BEC300E3F6E5 /* UrlDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlDataSource.swift; sourceTree = "<group>"; };
+		A5E9BA852232C30500E3F6E5 /* UrlTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,8 @@
 		A5203320220EF2AE0096FB57 /* JammerCancellerExtension */ = {
 			isa = PBXGroup;
 			children = (
+				A5E9BA842232C1DD00E3F6E5 /* DomainEntity */,
+				A5E9BA812232BEA000E3F6E5 /* View */,
 				A5203336220EF4E90096FB57 /* style.css */,
 				A5203321220EF2AE0096FB57 /* SafariExtensionHandler.swift */,
 				A5203323220EF2AE0096FB57 /* SafariExtensionViewController.swift */,
@@ -152,6 +158,22 @@
 				A515AD22223176C30048E537 /* ExtensionInt.swift */,
 			);
 			path = JammerCancellerExtension;
+			sourceTree = "<group>";
+		};
+		A5E9BA812232BEA000E3F6E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5E9BA822232BEC300E3F6E5 /* UrlDataSource.swift */,
+				A5E9BA852232C30500E3F6E5 /* UrlTableViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5E9BA842232C1DD00E3F6E5 /* DomainEntity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DomainEntity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,10 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E9BA832232BEC300E3F6E5 /* UrlDataSource.swift in Sources */,
 				A5B8ED5C2222CA4500901D3F /* ExtensionString.swift in Sources */,
 				A5203324220EF2AE0096FB57 /* SafariExtensionViewController.swift in Sources */,
 				A5598DE122221E36008FA511 /* SafariExtensionService.swift in Sources */,
 				A515AD23223176C30048E537 /* ExtensionInt.swift in Sources */,
+				A5E9BA862232C30500E3F6E5 /* UrlTableViewDelegate.swift in Sources */,
 				A5203322220EF2AE0096FB57 /* SafariExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
