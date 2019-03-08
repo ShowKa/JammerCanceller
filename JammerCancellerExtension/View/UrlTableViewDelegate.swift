@@ -11,4 +11,10 @@ import AppKit
 
 class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
     
+    //let dataSource : UrlDataSource
+    
+    //init(_ dataSource: UrlDataSource) {
+      //  self.dataSource = dataSource
+    //}
+
 }

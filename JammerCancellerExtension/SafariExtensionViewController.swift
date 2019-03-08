@@ -31,10 +31,10 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let urlValue : String = UserDefaults.standard.string(forKey: "url") ?? ""
+        let urlValue : String = UserDefaults.standard.string(forKey: "url") ?? "default.com"
         NSLog("saved value = " + urlValue)
-        // url.stringValue = urlValue
-        urlTable.dataSource = UrlDataSource()
+        let dataSource = UrlDataSource(urlList:[urlValue])
+        urlTable.dataSource = dataSource
         urlTable.delegate = UrlTableViewDelegate()
     }
     

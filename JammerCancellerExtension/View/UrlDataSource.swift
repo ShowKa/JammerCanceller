@@ -11,4 +11,12 @@ import AppKit
 
 class UrlDataSource : NSObject, NSTableViewDataSource {
     
+    var urlList : [String]
+    
+    init(urlList : [String]) {
+        self.urlList = urlList
+    }
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return self.urlList.count
+    }
 }

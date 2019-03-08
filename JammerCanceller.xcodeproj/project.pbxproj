@@ -140,7 +140,6 @@
 		A5203320220EF2AE0096FB57 /* JammerCancellerExtension */ = {
 			isa = PBXGroup;
 			children = (
-				A5E9BA842232C1DD00E3F6E5 /* DomainEntity */,
 				A5E9BA812232BEA000E3F6E5 /* View */,
 				A5203336220EF4E90096FB57 /* style.css */,
 				A5203321220EF2AE0096FB57 /* SafariExtensionHandler.swift */,
@@ -167,13 +166,6 @@
 				A5E9BA852232C30500E3F6E5 /* UrlTableViewDelegate.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		A5E9BA842232C1DD00E3F6E5 /* DomainEntity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DomainEntity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
