@@ -21,6 +21,7 @@
 .jc-message {
     font-weight: bold;
     color: white;
+    -webkit-user-select: none;
 }
 
 .jc-input {
