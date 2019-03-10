@@ -17,8 +17,8 @@ class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
         self.dataSource = dataSource
     }
     
-//    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-//        NSLog("行番号 : " + String(row))
-//        return nil
-//    }
+   func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        NSLog("NSView 行番号 : " + String(row))
+        return nil
+    }
 }
