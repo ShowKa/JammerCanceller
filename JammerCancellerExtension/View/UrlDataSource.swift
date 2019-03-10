@@ -16,7 +16,9 @@ class UrlDataSource : NSObject, NSTableViewDataSource {
     init(urlList : [String]) {
         self.urlList = urlList
     }
+    
     func numberOfRows(in tableView: NSTableView) -> Int {
+        NSLog("numberOfRow : " + String(self.urlList.count))
         return self.urlList.count
     }
 }

@@ -11,10 +11,14 @@ import AppKit
 
 class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
     
-    //let dataSource : UrlDataSource
+    let dataSource : UrlDataSource
     
-    //init(_ dataSource: UrlDataSource) {
-      //  self.dataSource = dataSource
-    //}
-
+    init(_ dataSource: UrlDataSource) {
+        self.dataSource = dataSource
+    }
+    
+//    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+//        NSLog("行番号 : " + String(row))
+//        return nil
+//    }
 }

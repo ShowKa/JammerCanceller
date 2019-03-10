@@ -11,7 +11,7 @@ import SafariServices
 class SafariExtensionViewController: SFSafariExtensionViewController {
     
     static let shared = SafariExtensionViewController()
-
+    
     @IBOutlet weak var urlTable: NSTableView!
     
     // ----------------
@@ -34,8 +34,9 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         let urlValue : String = UserDefaults.standard.string(forKey: "url") ?? "default.com"
         NSLog("saved value = " + urlValue)
         let dataSource = UrlDataSource(urlList:[urlValue])
+        urlTable.delegate = UrlTableViewDelegate(dataSource)
         urlTable.dataSource = dataSource
-        urlTable.delegate = UrlTableViewDelegate()
+        // urlTable.reloadData()
     }
     
     // ----------------
