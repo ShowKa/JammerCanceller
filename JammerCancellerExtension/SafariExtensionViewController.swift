@@ -15,6 +15,12 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     // url table
     @IBOutlet weak var urlTable: NSTableView!
     
+    // input
+    @IBOutlet weak var urlTextField: NSTextField!
+    
+    // button
+    @IBOutlet weak var addNewUrlButton: NSButton!
+    
     // keep reference
     // otherwise, these will be deallocated
     var dataSource: UrlDataSource!
@@ -43,14 +49,20 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         self.delegate = UrlTableViewDelegate(self.dataSource)
         urlTable.dataSource = self.dataSource
         urlTable.delegate = self.delegate
-        // urlTable.reloadData()
+        //
     }
     
     // ----------------
     // 操作
     // ----------------
-    @IBAction func buttonClick(_ sender: Any) {
-        NSLog("---------------popup button clicked---------------------")
+    @IBAction func addNewUrl(_ sender: Any) {
+        NSLog("---------------add button clicked---------------------")
+        if let url = urlTextField.accessibilityValue() {
+            NSLog("input : " + url)
+            self.dataSource.urlList.append(url)
+            urlTable.reloadData()
+            urlTextField.stringValue = ""
+        }
         // UserDefaults.standard.set(url.accessibilityValue(), forKey: "url")
     }
 }

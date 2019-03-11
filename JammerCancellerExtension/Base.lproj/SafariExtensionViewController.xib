@@ -8,7 +8,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SafariExtensionViewController" customModule="JammerCancellerExtension" customModuleProvider="target">
             <connections>
+                <outlet property="addNewUrlButton" destination="fUN-vN-yZd" id="m78-8t-5Ye"/>
                 <outlet property="urlTable" destination="s2E-TX-7HA" id="7K2-ls-bJb"/>
+                <outlet property="urlTextField" destination="Qd7-9T-8ms" id="hz0-UE-8Is"/>
                 <outlet property="view" destination="c22-O7-iKe" id="vwT-Xx-Aiz"/>
             </connections>
         </customObject>
@@ -83,9 +85,9 @@
                     </tableHeaderView>
                 </scrollView>
                 <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qd7-9T-8ms">
-                    <rect key="frame" x="0.0" y="1" width="216" height="27"/>
+                    <rect key="frame" x="0.0" y="1" width="214" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="GSo-BL-ZmW">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="new url...." drawsBackground="YES" id="GSo-BL-ZmW">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -98,6 +100,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="addNewUrl:" target="-2" id="mWz-Jc-fnW"/>
+                    </connections>
                 </button>
             </subviews>
             <point key="canvasLocation" x="-736.5" y="-315.5"/>
