@@ -10,6 +10,7 @@ import Foundation
 import AppKit
 
 class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
+
     
     let dataSource : UrlDataSource
     
@@ -17,8 +18,16 @@ class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
         self.dataSource = dataSource
     }
     
-   func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        NSLog("NSView 行番号 : " + String(row))
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        NSLog("tableView -> NSView 行番号 : " + String(row))
+        if let cell = tableView.makeView(withIdentifier: CellID.Url, owner: nil) as? NSTableCellView {
+            cell.textField?.stringValue = self.dataSource.urlList[row]
+            return cell
+        }
         return nil
     }
+}
+
+fileprivate enum CellID {
+    static let Url = NSUserInterfaceItemIdentifier("UrlCellID")
 }

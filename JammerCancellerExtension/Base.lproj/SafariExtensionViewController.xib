@@ -45,7 +45,7 @@
                                         </textFieldCell>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="JBU-vR-rmy">
+                                            <tableCellView identifier="UrlCellID" id="JBU-vR-rmy">
                                                 <rect key="frame" x="1" y="1" width="734" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -83,7 +83,7 @@
                     </tableHeaderView>
                 </scrollView>
             </subviews>
-            <point key="canvasLocation" x="-417.5" y="-93.5"/>
+            <point key="canvasLocation" x="-465" y="-210"/>
         </customView>
     </objects>
 </document>
