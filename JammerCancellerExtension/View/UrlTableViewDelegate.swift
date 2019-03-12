@@ -30,17 +30,26 @@ class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
             // remove row button
             if let cell = tableView.makeView(withIdentifier: CellID.Remove, owner: nil ) as? NSTableCellView {
                 NSLog("add remove button ----")
-                let rect = NSRect(x: 0, y: 0, width: 15, height: 15)
-                let button = NSButton(frame: rect)
+                let button = NSButton(title: "ー", target: self, action: #selector(self.removeUrl(_:)))
+                // let rect = NSRect(x: 0, y: 0, width: 15, height: 15)
+                let position = NSPoint(x:0, y:0)
+                let size = NSSize(width: 30, height: 30)
+                button.setFrameOrigin(position)
+                button.setFrameSize(size)
                 button.setButtonType(NSButton.ButtonType.momentaryPushIn)
-                button.title = "-"
                 button.tag = row
+                // button to cell
                 cell.addSubview(button)
                 cell.textField?.stringValue = ""
                 return cell
             }
         }
+
         return nil
+    }
+    
+    @objc func removeUrl(_ sender: NSButton) {
+        print("Continue button clicked : " + String(sender.tag))
     }
 }
 
