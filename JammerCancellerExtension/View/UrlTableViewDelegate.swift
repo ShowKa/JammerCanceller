@@ -44,7 +44,6 @@ class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
 extension UrlTableViewDelegate {
     // make TableCells
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        NSLog("tableView -> NSView 行番号 : " + String(row))
         if tableColumn == tableView.tableColumns[0] {
             // url column
             if let cell = tableView.makeView(withIdentifier: CellID.Url, owner: nil) as? NSTableCellView {
@@ -54,14 +53,13 @@ extension UrlTableViewDelegate {
         } else if tableColumn == tableView.tableColumns[1] {
             // remove row button
             if let cell = tableView.makeView(withIdentifier: CellID.Remove, owner: nil ) as? NSTableCellView {
-                NSLog("add remove button ----")
-                let button = NSButton(title: "ー", target: self, action: #selector(self.removeUrl(_:)))
-                // let rect = NSRect(x: 0, y: 0, width: 15, height: 15)
+                let button = NSButton(title: "", target: self, action: #selector(self.removeUrl(_:)))
                 let position = NSPoint(x:0, y:0)
-                let size = NSSize(width: 30, height: 30)
+                let size = NSSize(width: 25, height: 25)
                 button.setFrameOrigin(position)
                 button.setFrameSize(size)
                 button.setButtonType(NSButton.ButtonType.momentaryPushIn)
+                button.bezelStyle = NSButton.BezelStyle.smallSquare
                 button.tag = row
                 // button to cell
                 cell.addSubview(button)
