@@ -11,7 +11,6 @@ import AppKit
 
 class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
 
-    
     let dataSource : UrlDataSource
     
     init(_ dataSource: UrlDataSource) {
@@ -49,7 +48,7 @@ class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
     }
     
     @objc func removeUrl(_ sender: NSButton) {
-        print("Continue button clicked : " + String(sender.tag))
+        print("button clicked : " + String(sender.tag))
     }
 }
 

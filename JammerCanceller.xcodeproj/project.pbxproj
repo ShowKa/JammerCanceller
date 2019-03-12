@@ -20,6 +20,7 @@
 		A5203330220EF2AE0096FB57 /* JammerCancellerExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A520331C220EF2AE0096FB57 /* JammerCancellerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A5203337220EF4E90096FB57 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = A5203336220EF4E90096FB57 /* style.css */; };
 		A5384F4E2231710200F9714A /* Message.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5384F4D2231710200F9714A /* Message.plist */; };
+		A54EF9132237A9610032276A /* UrlPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54EF9122237A9610032276A /* UrlPersistence.swift */; };
 		A553DA962224418D00B6F6BA /* element.js in Resources */ = {isa = PBXBuildFile; fileRef = A553DA952224418D00B6F6BA /* element.js */; };
 		A553DA98222442BC00B6F6BA /* overlay.js in Resources */ = {isa = PBXBuildFile; fileRef = A553DA97222442BC00B6F6BA /* overlay.js */; };
 		A5598DE122221E36008FA511 /* SafariExtensionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5598DE022221E36008FA511 /* SafariExtensionService.swift */; };
@@ -71,6 +72,7 @@
 		A520332D220EF2AE0096FB57 /* JammerCancellerExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JammerCancellerExtension.entitlements; sourceTree = "<group>"; };
 		A5203336220EF4E90096FB57 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		A5384F4D2231710200F9714A /* Message.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Message.plist; sourceTree = "<group>"; };
+		A54EF9122237A9610032276A /* UrlPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlPersistence.swift; sourceTree = "<group>"; };
 		A553DA952224418D00B6F6BA /* element.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = element.js; sourceTree = "<group>"; };
 		A553DA97222442BC00B6F6BA /* overlay.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = overlay.js; sourceTree = "<group>"; };
 		A5598DE022221E36008FA511 /* SafariExtensionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionService.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		A5203320220EF2AE0096FB57 /* JammerCancellerExtension */ = {
 			isa = PBXGroup;
 			children = (
+				A54EF9112237A93D0032276A /* Service */,
 				A5E9BA812232BEA000E3F6E5 /* View */,
 				A5203336220EF4E90096FB57 /* style.css */,
 				A5203321220EF2AE0096FB57 /* SafariExtensionHandler.swift */,
@@ -157,6 +160,14 @@
 				A515AD22223176C30048E537 /* ExtensionInt.swift */,
 			);
 			path = JammerCancellerExtension;
+			sourceTree = "<group>";
+		};
+		A54EF9112237A93D0032276A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A54EF9122237A9610032276A /* UrlPersistence.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		A5E9BA812232BEA000E3F6E5 /* View */ = {
@@ -292,6 +303,7 @@
 				A515AD23223176C30048E537 /* ExtensionInt.swift in Sources */,
 				A5E9BA862232C30500E3F6E5 /* UrlTableViewDelegate.swift in Sources */,
 				A5203322220EF2AE0096FB57 /* SafariExtensionHandler.swift in Sources */,
+				A54EF9132237A9610032276A /* UrlPersistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
