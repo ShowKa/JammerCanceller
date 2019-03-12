@@ -23,6 +23,13 @@ class UrlPersistence {
         UserDefaults.standard.set(urlList, forKey: key)
     }
     
+    // remove
+    func remove(at index: Int) {
+        var urlList = self.getUrlList()
+        urlList.remove(at: index)
+        UserDefaults.standard.set(urlList, forKey: key)
+    }
+    
     // get url list
     func getUrlList() -> [String] {
         let _urlList = UserDefaults.standard.array(forKey: key)

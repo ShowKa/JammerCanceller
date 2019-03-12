@@ -52,7 +52,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         super.viewDidLoad()
         let urlList = urlPersistence.getUrlList()
         self.dataSource = UrlDataSource(urlList:urlList)
-        self.delegate = UrlTableViewDelegate(self.dataSource)
+        self.delegate = UrlTableViewDelegate(urlTable, self.dataSource)
         urlTable.dataSource = self.dataSource
         urlTable.delegate = self.delegate
     }
@@ -65,7 +65,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         if let url = urlTextField.accessibilityValue() {
             // add url
             self.delegate.addUrl(url)
-            urlTable.reloadData()
             // reset textfield
             urlTextField.stringValue = ""
         }

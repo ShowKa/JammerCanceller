@@ -11,6 +11,9 @@ import AppKit
 
 class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
 
+    // Table
+    let tableView : NSTableView
+    
     // DataSource
     let dataSource : UrlDataSource
     
@@ -18,23 +21,34 @@ class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
     let urlPersistence = UrlPersistence.shared
     
     // init
-    init(_ dataSource: UrlDataSource) {
+    init(_ tableView: NSTableView, _ dataSource: UrlDataSource) {
+        self.tableView = tableView
         self.dataSource = dataSource
     }
     
     // add URL
     func addUrl(_ url: String) {
-        dataSource.urlList.append(url)
+        dataSource.addUrl(url)
         urlPersistence.saveNewUrl(url)
+        self.tableView.reloadData()
     }
     
+    // remove url
+    func removeUrl(at index: Int) {
+        dataSource.removeUrl(at: index)
+        urlPersistence.remove(at: index)
+        self.tableView.reloadData()
+    }
+}
+
+extension UrlTableViewDelegate {
     // make TableCells
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         NSLog("tableView -> NSView 行番号 : " + String(row))
         if tableColumn == tableView.tableColumns[0] {
             // url column
             if let cell = tableView.makeView(withIdentifier: CellID.Url, owner: nil) as? NSTableCellView {
-                cell.textField?.stringValue = self.dataSource.urlList[row]
+                cell.textField?.stringValue = self.dataSource.get(at: row)
                 return cell
             }
         } else if tableColumn == tableView.tableColumns[1] {
@@ -58,9 +72,9 @@ class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
         return nil
     }
     
-    // remove URL
+    // click remove button
     @objc func removeUrl(_ sender: NSButton) {
-        print("button clicked : " + String(sender.tag))
+        self.removeUrl(at: sender.tag)
     }
 }
 
