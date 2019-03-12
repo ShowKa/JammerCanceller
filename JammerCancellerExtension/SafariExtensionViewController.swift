@@ -63,7 +63,8 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     // URL追加操作
     @IBAction func addNewUrl(_ sender: Any) {
         if let url = urlTextField.accessibilityValue() {
-            self.dataSource.urlList.append(url)
+            // add url
+            self.delegate.addUrl(url)
             urlTable.reloadData()
             // reset textfield
             urlTextField.stringValue = ""

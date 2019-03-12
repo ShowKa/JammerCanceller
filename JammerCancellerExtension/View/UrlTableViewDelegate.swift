@@ -11,12 +11,24 @@ import AppKit
 
 class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
 
+    // DataSource
     let dataSource : UrlDataSource
     
+    // URL永続化Service
+    let urlPersistence = UrlPersistence.shared
+    
+    // init
     init(_ dataSource: UrlDataSource) {
         self.dataSource = dataSource
     }
     
+    // add URL
+    func addUrl(_ url: String) {
+        dataSource.urlList.append(url)
+        urlPersistence.saveNewUrl(url)
+    }
+    
+    // make TableCells
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         NSLog("tableView -> NSView 行番号 : " + String(row))
         if tableColumn == tableView.tableColumns[0] {
@@ -43,10 +55,10 @@ class UrlTableViewDelegate : NSObject, NSTableViewDelegate {
                 return cell
             }
         }
-
         return nil
     }
     
+    // remove URL
     @objc func removeUrl(_ sender: NSButton) {
         print("button clicked : " + String(sender.tag))
     }

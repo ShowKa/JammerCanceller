@@ -17,7 +17,7 @@ class UrlPersistence {
     private let key = "urlList"
     
     // save new url to list
-    func saveNewUrl(url:String) {
+    func saveNewUrl(_ url: String) {
         var urlList = self.getUrlList()
         urlList.append(url)
         UserDefaults.standard.set(urlList, forKey: key)
