@@ -10,8 +10,15 @@ import SafariServices
 
 class SafariExtensionViewController: SFSafariExtensionViewController {
     
+    // instance
     static let shared = SafariExtensionViewController()
+
+    // URL永続化Service
+    let urlPersistence = UrlPersistence.shared
     
+    // ----------------
+    // View
+    // ----------------
     // url table
     @IBOutlet weak var urlTable: NSTableView!
     
@@ -33,7 +40,6 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     init() {
         // クラスの持つ指定イニシャライザを呼び出す
         super.init(nibName: nil, bundle: nil)
-        NSLog("-----------------------call init-------------------------")
     }
     
     // 新しく init を定義した場合に必須
@@ -41,28 +47,30 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         fatalError("init(coder:) 未実装です・・・")
     }
     
+    // view 構築
     override func viewDidLoad() {
         super.viewDidLoad()
-        let urlValue : String = UserDefaults.standard.string(forKey: "url") ?? "default.com"
-        NSLog("saved value = " + urlValue)
-        self.dataSource = UrlDataSource(urlList:[urlValue, "www.fax.com"])
-        self.delegate = UrlTableViewDelegate(self.dataSource)
+        let urlList = urlPersistence.getUrlList()
+        self.dataSource = UrlDataSource(urlList:urlList)
+        self.delegate = UrlTableViewDelegate(urlTable, self.dataSource)
         urlTable.dataSource = self.dataSource
         urlTable.delegate = self.delegate
-        //
     }
     
     // ----------------
     // 操作
     // ----------------
+    // URL追加操作
     @IBAction func addNewUrl(_ sender: Any) {
-        NSLog("---------------add button clicked---------------------")
         if let url = urlTextField.accessibilityValue() {
-            NSLog("input : " + url)
-            self.dataSource.urlList.append(url)
-            urlTable.reloadData()
+            // 0文字ならなにもしない。
+            if (url.count == 0 ) {
+                return
+            }
+            // add url
+            self.delegate.addUrl(url)
+            // reset textfield
             urlTextField.stringValue = ""
         }
-        // UserDefaults.standard.set(url.accessibilityValue(), forKey: "url")
     }
 }

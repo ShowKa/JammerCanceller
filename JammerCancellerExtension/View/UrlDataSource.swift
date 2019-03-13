@@ -21,4 +21,16 @@ class UrlDataSource : NSObject, NSTableViewDataSource {
         NSLog("numberOfRow : " + String(self.urlList.count))
         return self.urlList.count
     }
+    
+    func addUrl(_ url: String) {
+        self.urlList.append(url)
+    }
+    
+    func removeUrl(at index: Int) {
+        self.urlList.remove(at: index)
+    }
+    
+    func get(at index: Int) -> String {
+        return self.urlList[index]
+    }
 }

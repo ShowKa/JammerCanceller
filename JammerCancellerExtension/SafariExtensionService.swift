@@ -13,25 +13,26 @@ class SafariExtensionService {
     // instance
     static let shared = SafariExtensionService()
     
+    // URL永続化Service
+    let urlPersistence = UrlPersistence.shared
+    
+    // 対象URL検証
     func targetWebPage(webPageUrl url: String) -> Bool {
-        let _target = self.getUrl()
-        NSLog(_target)
-        NSLog(url)
-        return url.matches(_target)
+        let targets = self.urlPersistence.getUrlList()
+        var matched = false
+        targets.forEach { (target) in
+            if (url.matches(target)) {
+                matched = true
+            }
+        }
+        return matched
     }
     
+    // ランダムメッセージ取得
     func getRandomMessage() -> String {
         let list = getMessageList();
         let index = Int.random(range: 0..<list.count)
         return list[index];
-    }
-    
-    func saveUrl(url:String) {
-        UserDefaults.standard.set(url, forKey: "url")
-    }
-    
-    func getUrl() -> String {
-        return UserDefaults.standard.string(forKey: "url") ?? ""
     }
     
     // message list from Message.plist
