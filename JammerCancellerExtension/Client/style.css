@@ -1,0 +1,29 @@
+.jc-overlay {
+    visibility: hidden;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 1);
+    font-size: 15px important!;
+}
+
+.jc-content {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+}
+
+.jc-message {
+    font-weight: bold;
+    color: white;
+    -webkit-user-select: none;
+}
+
+.jc-input {
+    width: 300px;
+}
