@@ -20,12 +20,16 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             // call service
             switch messageName {
             case "execute?":
-                let targetWebPage = self.service.targetWebPage(webPageUrl: properties!.url!.absoluteString)
-                if targetWebPage {
-                    // do it
-                    NSLog("DoIt")
-                    let message = self.service.getRandomMessage()
-                    page.dispatchMessageToScript(withName: "DoIt", userInfo: ["message" : message])
+                if let url = properties?.url {
+                    let targetWebPage = self.service.targetWebPage(webPageUrl: url.absoluteString)
+                    if targetWebPage {
+                        // do it
+                        NSLog("DoIt")
+                        let message = self.service.getRandomMessage()
+                        page.dispatchMessageToScript(withName: "DoIt", userInfo: ["message" : message])
+                    }
+                } else {
+                    NSLog("No URL!!!!")
                 }
                 break
             default:
