@@ -143,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				A54EF9112237A93D0032276A /* Service */,
-				A5E9BA812232BEA000E3F6E5 /* View */,
+				A5E9BA812232BEA000E3F6E5 /* ViewController */,
 				A5203336220EF4E90096FB57 /* style.css */,
 				A5203321220EF2AE0096FB57 /* SafariExtensionHandler.swift */,
 				A5203323220EF2AE0096FB57 /* SafariExtensionViewController.swift */,
@@ -170,13 +170,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		A5E9BA812232BEA000E3F6E5 /* View */ = {
+		A5E9BA812232BEA000E3F6E5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				A5E9BA822232BEC300E3F6E5 /* UrlDataSource.swift */,
 				A5E9BA852232C30500E3F6E5 /* UrlTableViewDelegate.swift */,
 			);
-			path = View;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
