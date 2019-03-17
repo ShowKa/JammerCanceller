@@ -5,9 +5,11 @@
 	<key>message</key>
 	<array>
 		<string>今日はもう休みたい。働きたくない。</string>
-		<string>No more Work! I want to play!!</string>
-		<string>I don't want to work...</string>
-		<string>今日も一日頑張ばらないぞい！</string>
+		<string>No more work! I want to play!!</string>
+		<string>I don&apos;t want to work...</string>
+		<string>今日も一日頑張らないぞい！</string>
+		<string>No! We can&apos;t!!</string>
+		<string>絶対に働きたくないでござる！！</string>
 	</array>
 </dict>
 </plist>
