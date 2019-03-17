@@ -53,16 +53,15 @@ extension UrlTableViewDelegate {
         } else if tableColumn == tableView.tableColumns[1] {
             // remove row button
             if let cell = tableView.makeView(withIdentifier: CellID.Remove, owner: nil ) as? NSTableCellView {
-                let button = NSButton(title: "", target: self, action: #selector(self.removeUrl(_:)))
-                let position = NSPoint(x:0, y:0)
-                let size = NSSize(width: 25, height: 25)
-                button.setFrameOrigin(position)
-                button.setFrameSize(size)
-                button.setButtonType(NSButton.ButtonType.momentaryPushIn)
-                button.bezelStyle = NSButton.BezelStyle.smallSquare
-                button.tag = row
                 // button to cell
-                cell.addSubview(button)
+                let w = cell.frame.width
+                let h = cell.frame.height
+                let rect = CGRect(x: 0, y: 0, width: w, height: h)
+                let rmButton = RemoveButton(frame: rect)
+                rmButton.setRow(row)
+                rmButton.setAction(self, #selector(self.removeUrl(_:)))
+                cell.addSubview(rmButton)
+                // clear
                 cell.textField?.stringValue = ""
                 return cell
             }
