@@ -35,6 +35,11 @@ class SafariExtensionService {
         return list[index];
     }
     
+    // ランダムな文字列取得
+    func getRandomString() -> String {
+        return String.randomAlphaNumericString(length: 12)
+    }
+    
     // message list from Message.plist
     private func getMessageList() -> [String] {
         var myEnglishArray: [String] = []
