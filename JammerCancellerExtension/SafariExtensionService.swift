@@ -37,7 +37,7 @@ class SafariExtensionService {
     
     // ランダムな文字列取得
     func getRandomString() -> String {
-        return String.randomAlphaNumericString(length: 12)
+        return String.randomAlphaNumericString(length: 16)
     }
     
     // message list from Message.plist
